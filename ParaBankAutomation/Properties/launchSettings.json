@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "ParaBankAutomation": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:61979;http://localhost:61980"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\My Files\\Tasks\\western-union-automation-task-website\\ParaBankAutomation\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\My Files\\Tasks\\western-union-automation-task-website\\ParaBankAutomation\\wwwroot\\js\\dashboard.js",
+      "PackagePath": "staticwebassets\\js\\dashboard.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ParaBankAutomation.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ParaBankAutomation.props",
+      "PackagePath": "build\\ParaBankAutomation.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ParaBankAutomation.props",
+      "PackagePath": "buildMultiTargeting\\ParaBankAutomation.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ParaBankAutomation.props",
+      "PackagePath": "buildTransitive\\ParaBankAutomation.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

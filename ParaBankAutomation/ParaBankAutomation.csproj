@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>ParaBankAutomation</RootNamespace>
+    <AssemblyName>ParaBankAutomation</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- CSV and Excel reading -->
+    <PackageReference Include="CsvHelper" Version="33.0.1" />
+    <PackageReference Include="ClosedXML" Version="0.102.3" />
+
+    <!-- Selenium: WebDriver core + Support (required for SelectElement) -->
+    <PackageReference Include="Selenium.WebDriver" Version="4.21.0" />
+    <PackageReference Include="Selenium.Support" Version="4.21.0" />
+
+    <!-- Real-time browser updates -->
+    <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
+
+    <!-- JSON for currency API response -->
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+
+</Project>

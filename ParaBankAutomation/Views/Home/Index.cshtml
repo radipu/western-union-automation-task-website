@@ -1,0 +1,103 @@
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container">
+
+  <div class="hero">
+    <div>
+      <h1 class="hero-title">ParaBank Account & Loan RPA</h1>
+      <p class="hero-copy">
+        Upload customer CSV or Excel data, run the ParaBank account and loan workflow,
+        then download an operator report with <strong class="accent-text">USD and EUR values</strong>.
+      </p>
+    </div>
+    <div class="btn-group hero-actions">
+      <label class="btn btn-outline">
+        📂 Upload CSV / Excel
+        <input type="file" id="fileInput" class="file-input-hidden" accept=".csv,.xlsx,.xlsm" />
+      </label>
+      <button id="btnRun" class="btn btn-primary btn-lg" disabled>
+        ▶ Run Automation
+      </button>
+      <button id="btnDownload" class="btn btn-success" disabled>
+        ↓ Download Report
+      </button>
+    </div>
+  </div>
+
+  <div id="uploadZone" class="upload-zone">
+    <input type="file" id="fileInput2" accept=".csv,.xlsx,.xlsm" />
+    <div class="upload-icon">📊</div>
+    <div class="upload-title">Drop your CSV or Excel file here</div>
+    <div class="upload-hint">Supports .csv · .xlsx · .xlsm &nbsp;|&nbsp; the provided customer file format</div>
+    <div id="uploadFilename" class="upload-filename hidden"></div>
+  </div>
+
+  <div id="progressBanner" class="progress-banner mt-28 hidden">
+    <div class="progress-banner-top">
+      <span id="spinIcon" class="spin">⟳</span>
+      <span id="progressMsg">Initialising…</span>
+      <span id="progressCount" class="progress-count"></span>
+    </div>
+    <div class="progress-track">
+      <div id="progressFill" class="progress-fill"></div>
+    </div>
+  </div>
+
+  <div class="grid-2 mt-28">
+
+    <div class="card">
+      <div class="card-body">
+        <div class="section-title" id="previewTitle">Customer Queue</div>
+        <div id="emptyPreview" class="empty-state">
+          Upload a file to see the customer list.
+        </div>
+        <div class="table-wrap hidden" id="previewTableWrap">
+          <table id="previewTable">
+            <thead>
+              <tr>
+                <th>#</th><th>Name</th><th>Username</th><th>Type</th>
+                <th>Deposit</th><th>Down Pmt</th><th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="previewBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="section-title">Live Step Log</div>
+        <div class="log-box" id="logBox">
+          <span class="log-empty">Progress will stream here once the run starts.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="results-section card hidden" id="resultsSection">
+    <div class="card-body">
+      <div class="section-title">Results Summary</div>
+      <div class="table-wrap">
+        <table id="resultsTable">
+          <thead>
+            <tr>
+              <th>#</th><th>Customer</th><th>Account #</th>
+              <th>Loan (USD)</th><th>Down (USD)</th>
+              <th>Loan (EUR)</th><th>Down (EUR)</th>
+              <th>Loan Status</th><th>Overall</th>
+            </tr>
+          </thead>
+          <tbody id="resultsBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+@section Scripts {
+  <script src="~/js/dashboard.js" asp-append-version="true"></script>
+}

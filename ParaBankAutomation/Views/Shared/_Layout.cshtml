@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@(ViewData["Title"] ?? "ParaBank Automation Suite")</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-logo">P</div>
+      <div>
+        <div class="brand-name">ParaBank Automation Suite</div>
+        <div class="brand-sub">Western Union Practical Task</div>
+      </div>
+    </div>
+    <div class="header-badges">
+      <span class="badge badge-blue">RPA Demo</span>
+      <span class="badge badge-gray">C# · Selenium · .NET 8</span>
+    </div>
+  </div>
+</header>
+
+<main class="site-main">
+  @RenderBody()
+</main>
+
+<footer class="site-footer">
+  ParaBank Automation Suite &copy; @DateTime.Now.Year &nbsp;·&nbsp; Built for Western Union Practical Task Built by <a href="https://cv.radipu.com">radipu</a>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.0/signalr.min.js"></script>
+@RenderSection("Scripts", required: false)
+</body>
+</html>
